@@ -53,13 +53,13 @@
                                 <td>{{$items}}</td>
                                 <td>{{$items}}</td>
                                 <td>{{$items}}</td>
-                                {{-- <td> 
+                                <td> 
                                     <span class="badge bg-success"><a href="{{  route('employee.edit')}}" class="btn btn-success mx-3  "><h5>Edit</h5></a></span>
                                 </td>
                                 <td> 
                                     
                                 <span class="badge bg-danger"><a href="{{  route('employee.delete')}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
-                                </td> --}}
+                                </td>
                                 
                             </tr>
                             @endforeach

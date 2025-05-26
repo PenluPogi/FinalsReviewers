@@ -45,12 +45,12 @@ class employeecontroller extends Controller
     public function update(Request $request, int $id) {
         {
             $request->validate([
-                'fname' => 'required|max:255|mama ko',
-                'lname' => 'required|max:255|papa ko',
-                'midname' => 'required|max:255|ate ko',
-                'age' => 'required| tita ko',
-                'address' => 'required|max:255|tito ko',
-                'zip' => 'required| pamilya ko',
+                'fname' => 'required|max:255|string',
+                'lname' => 'required|max:255|string',
+                'midname' => 'required|max:255|string',
+                'age' => 'required|integer',
+                'address' => 'required|max:255|string',
+                'zip' => 'required|integer',
                 
             ]);
         
@@ -59,9 +59,9 @@ class employeecontroller extends Controller
             }
     }
 
-    public function (int $id){
+    public function delete(int $id){
         $employees = employee::findOrFail($id);
-        $employees->deete();
+        $employees->delete();
         return redirect ()->back()->with('status','Employee Deleted');
     }
 }
