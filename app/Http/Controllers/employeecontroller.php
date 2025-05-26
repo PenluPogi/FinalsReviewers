@@ -11,7 +11,8 @@ class employeecontroller extends Controller
     public function index()
     {   
 
-        return view ('employee.index');
+        $employees = employee::get();
+        return view ('employee.index',compact('employees'));
     }
 
     public function create()
@@ -32,7 +33,7 @@ class employeecontroller extends Controller
         
     ]);
 
-    ::create($request->all());
+    employee::create($request->all());
     return view ('employee.create');
     }
 
